@@ -1,0 +1,37 @@
+extends layout.pug
+
+block head
+    head
+        title Register - SharedFi
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel='stylesheet' href='/css/register-desk.css')
+        link(href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet")
+block content
+    #containerApp(ng-app='form')
+        #container(ng-controller='formInfo as formInfo1')
+            p#greeting Enjoy free WiFi by SharedFi. 
+            form(id = 'form' ng-show='flags.form')
+                input(type="text" name="First Name" class='form-input' id="firstName" value="" placeholder="First Name" ng-model='formInfo.firstName')
+                input(type="text" name="Last Name" class='form-input' id="lastName" value="" placeholder="Last Name" ng-model='formInfo.lastName')    
+                input(type="text" name="Email" class='form-input' id="email" value="" placeholder="E-mail" ng-model='formInfo.email' ng-show = 'flags.email')
+                input(type="text" name="Phone" class='form-input' id="phone" value="" placeholder="Phone" ng-model='formInfo.phone' ng-show = 'flags.sms')            
+                span(id='sendSMS' ng-click="sendSMS(formInfo)" ng-show = 'flags.sms') #[span(id='#verifyPhone') Verify Phone]
+                span(id='sendEmail' ng-click="sendEmail(formInfo)" ng-show = 'flags.email') #[span(id='#verifyEmail') Verify Email]
+                input(type="text" name="Code"  class='form-input' id="code" value="" placeholder="Code" autocomplete='off' class='code' ng-model='formInfo.codeE' ng-show = 'flags.sms')
+                #terms
+                    label(for="checkbox-1") I agree to the Terms of Service*. #[input(type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" ng-model='formInfo.terms')]
+            span(id='submit' ng-click="submitInfo(formInfo)" ng-hide='flags.email') #[span(id='connect') Connect] #[img(id='loading' src='/img/loading.svg')]
+            p(id='error') Please enter a valid
+            #socialLogin(ng-show='flags.fb')
+                p - connect with -
+                div(class="fb-login")
+    #video-ad
+    video(id='ad' width="800" height="800")
+        source(src="/video/ad_2.mp4" type="video/mp4")
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(src="/js/fb-sdk.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
+    script(src='/js/mask.js')
+    script(src="/js/styling-desk.js")
+    script(src="/ng/form.js")

@@ -1,0 +1,73 @@
+
+p{
+	 text-shadow: none;
+}
+button{
+	 text-shadow: none;
+}
+.ui-page { 
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#132b60+0,806ac4+100 */
+	background: #132b60; /* Old browsers */
+	background: -moz-linear-gradient(top,  #132b60 0%, #806ac4 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #132b60 0%,#806ac4 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #132b60 0%,#806ac4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#132b60', endColorstr='#806ac4',GradientType=0 ); /* IE6-9 */
+	}
+#greeting{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 20px;
+	color: white;
+}
+#code{
+	width: 100px !important;
+}
+#submit{
+	text-align: center;
+}
+#error{
+	/*position: relative;*/
+	/*position: absolute;*/
+	/*bottom: : 1000;*/
+	
+	/*margin-top: 80px;*/
+	/*display: none;*/
+	background-color: #C51346;
+	/*margin: 2%;*/
+	padding: 2%;
+	color: white;
+	text-align: center; 
+	/*z-index: 9999;*/
+}
+.fb-login{
+	position: absolute;
+	height: 80px;
+	width: 200px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	background: url('/img/fb-login.png');
+	background-size: cover;
+	margin-top: 40px;
+}
+#video-ad{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+#ad{
+	display: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 350px;
+	height: 350px;
+}
+div.ui-input-text .code { width: 100px !important }

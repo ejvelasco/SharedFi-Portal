@@ -1,0 +1,30 @@
+//- index.pug
+extends layout.pug
+
+block head
+    head
+        title Deals - SharedFi
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css")
+        link(href='//fonts.googleapis.com/css?family=Cairo' rel='stylesheet')
+        link(rel='stylesheet' href='/css/deals-mobile.css') 
+
+block content
+    #containerApp(ng-app='dealsApp')
+        #container(ng-controller='deals as deals1')
+            ul(id='deals' data-role="listview")
+                li(ng-repeat='deal in deals') 
+                    img(class='thumb' ng-src='{{deal.thumb}}')
+                    h1 {{deal.title}}
+                    h2 {{deal.desc}}
+                    h3 {{deal.loc}}
+                    img(class='icn' id='icn-{{$index}}' src='/img/carat-w.png')
+            #banner
+                img(id='ad' src = '')
+                img(id='back' src='/img/carat.png')
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+    script(src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
+    script(src="/ng/dealsApp.js") 
+    script(src="/js/deals.js") 

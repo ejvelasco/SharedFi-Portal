@@ -1,0 +1,36 @@
+extends layout.pug
+
+block head
+    head
+        title Bienvenido - SharedFi
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel='stylesheet' href='/css/register-desk-esp.css')
+        link(href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet")
+block content
+    #containerApp(ng-app='form')
+        #container(ng-controller='formInfo as formInfo1')
+            p#greeting Disfruta de WiFi gratuito - SharedFi. 
+            form#form
+                input(type="text" name="First Name" class='form-input' id="firstName" value="" placeholder="Nombre" ng-model='formInfo.firstName')
+                input(type="text" name="Last Name" class='form-input' id="lastName" value="" placeholder="Apellido" ng-model='formInfo.lastName')    
+                input(type="text" name="Email" class='form-input' id="email" value="" placeholder="E-mail" ng-model='formInfo.email')
+                input(type="text" name="Phone" class='form-input' id="phone" value="" placeholder="Teléfono" ng-model='formInfo.phone')            
+                span(id='sendSMS' ng-click="sendSMS(formInfo)") #[font Código SMS]
+                input(type="text" name="Code"  class='form-input' id="code" value="" placeholder="Código" autocomplete='off' class='code' ng-model='formInfo.codeE')
+                #terms
+                    label(for="checkbox-1") Acepto los Términos y Condiciones*. #[input(type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" ng-model='formInfo.terms')]
+            span(id='submit' ng-click="submitInfo(formInfo)") #[span(id='connect') Iniciar Sesión] #[img(id='loading' src='/img/loading.svg')]
+            p(id='error') Parece ser que hubo un error: 
+            #socialLogin
+                p - Iniciar con -
+                div(class="fb-login")
+    #video-ad
+    video(id='ad' width="800" height="800")
+        source(src="/video/ad_2.mp4" type="video/mp4")
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(src="/js/fb-sdk.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
+    script(src='/js/mask.js')
+    script(src="/js/styling-desk.js")
+    script(src="/ng/form.js")

@@ -1,0 +1,66 @@
+body{ 
+	font-family: 'Helvetica';
+}
+li{
+	border-color: #1A4F84 !important;
+	background: -moz-linear-gradient(top, #1e5799 0%, #0087bc 34%, #1b6aaa 99%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#0087bc 34%,#1b6aaa 99%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #1e5799 0%,#0087bc 34%,#1b6aaa 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	text-shadow:0 0 0 !important;
+}
+.thumb{
+	width: 65px;
+	height: 60px;
+	margin: 15px;
+}
+.icn{
+	margin-top: -70px;
+	width: 50px;
+	height: 50px;
+	opacity: .4;
+	float: right;
+}
+
+#banner{
+	background-color: white;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	/*z-index: 9999;*/
+}
+	#back{
+		transform: rotate(180deg);
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		opacity: .6;
+	}
+	#ad{
+		position: absolute;
+		width: 100%;
+		top: 10%;
+	}
+#deals{
+	/*z-index: 9998;*/
+}
+h1{
+	font-size: 20px !important;
+	/*font-weight: normal !important;*/
+	color: white;
+}
+h2{
+	font-size: 18px !important;
+	font-weight: normal !important;
+	color: white;
+	opacity: .7;
+}
+h3{
+	font-size: 15px !important;
+	font-weight: normal !important;
+	color: white;
+	opacity: .7;
+}

@@ -1,0 +1,15 @@
+extends layout.pug
+
+block head
+    head
+        title Welcome - SharedFi
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel='stylesheet' href='/css/ad-mobile.css')
+        link(href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet")
+block content
+    #video-ad
+    video(id='ad' width="800" height="800")
+        source(src="/video/ad_2.mp4" type="video/mp4")
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+    script(src="/js/ad-mobile.js")

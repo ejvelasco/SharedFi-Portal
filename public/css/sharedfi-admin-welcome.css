@@ -1,0 +1,8 @@
+#register{
+	border-style: solid;
+	transition: background .3s;
+}
+#register:hover{
+	background-color: blue;
+	cursor: pointer;
+}

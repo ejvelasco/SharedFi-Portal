@@ -1,0 +1,27 @@
+extends layout.pug
+
+block head
+    head
+        title Sign Up - SharedFi
+        link(rel='stylesheet' href='/css/sharedfi-admin-welcome.css')
+        script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
+        script(src="/ng/sharedfi-admin-app.js")
+block content
+    #containerApp(ng-app='admin')
+        p Register!
+        #container(ng-controller='register as register1')
+            form
+                label(for='username' id='usernameL') Username:  
+                input(type='text' id='username' ng-model='info.username') 
+                label(for='password' id='passwordL') Password:
+                input(type='password' id='password' ng-model='info.password')
+            span(id='register' ng-click='register(info)') Register
+            form
+                label(for='username' id='usernameL') Username:  
+                input(type='text' id='username' ng-model='login.username') 
+                label(for='password' id='passwordL') Password:
+                input(type='password' id='password' ng-model='login.password')
+            span(id='register' ng-click='logIn(login)') Log In
+            p(ng-click='callRestricted()') Reveal!: {{message}}

@@ -1,0 +1,36 @@
+input{
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	font-family: "Helvetica";
+	font-size: 1.2em;
+	border-bottom: solid 1px #BABABA;
+	outline: none;
+}
+
+form{
+	font-family: "Helvetica";
+	font-size: 1.2em;
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+}
+#submit{
+	background-color: #DCDCDC;
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+	transition: all .3s ease;
+	cursor: pointer;
+}
+#submit:hover{
+	background-color: #BABABA;
+}
